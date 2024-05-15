@@ -1,1 +1,1 @@
-Selenium
+Automação de testes web com Selenium Webdriver e Python.

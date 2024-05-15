@@ -1,0 +1,18 @@
+
+*** Selenium ***
+
+Selenium IDE => extensão do Chrome, Firefox e Edge. Grava e reproduz interações com o navegador.
+
+Selenium Grid => usa o Selenium Webdriver para rodar testes em várias máquinas ao mesmo tempo.
+
+
+*** Selenium Webdriver ***
+
+É uma biblioteca/módulo para interagir com navegadores. Também considerado uma API e usado para 
+automatizar testes de GUI.
+
+Manipula navegadores Web nativamente, suportando várias linguagens de programação.
+
+Como funciona...
+Temos a parte de automação do código na linguagem escolhida => webdriver  - onde o Selenium vai 
+interpretar o código e traduzir em ações no Browser.
