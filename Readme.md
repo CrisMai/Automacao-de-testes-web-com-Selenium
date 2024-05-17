@@ -27,3 +27,13 @@ Set-ExecutionPolicy Unrestricted -Scope Process
 Esse comando vai habilitar a execução do script na sessão aberta do Powershell.
 
 
+
+*** Criando Ambiente Virtual (venv) no PyCharm ***
+
+Acesse o PyCharm e crie um novo projeto
+Escolha o caminho da pasta onde o projeto ficará 
+O PyCharm assim que você criar um novo projeto ele já cria um novo ambiente virtual
+Clica em Create
+Em seguida ative o ambiente virtual usando o código: venv\Scripts\Activate.ps1
+
+
