@@ -14,3 +14,16 @@ Para conferir se foi instalado corretamente acesse o prompt de comando e digite 
 
 Acesse o site https://www.jetbrains.com/
 Na aba Developer Tools clique na opção PyCharm e baixe a versão Community
+
+
+*** Criando Ambiente Virtual (venv) no Vs Code ***
+
+Acesse o terminal do Vs Code e entre na pasta que deseja criar o projeto
+Use o comando: python -m venv venv (nome do ambiente virtual)
+Entre na pasta onde o projeto foi criado e certifique-se que o ambiente virtual foi criado
+Em seguida ative o ambiente virtual usando o código: venv\Scripts\Activate.ps1
+Caso ocorra um erro no momento da ativação do script do ambiente virtual rode o seguinte comando: 
+Set-ExecutionPolicy Unrestricted -Scope Process
+Esse comando vai habilitar a execução do script na sessão aberta do Powershell.
+
+
