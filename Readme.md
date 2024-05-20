@@ -37,3 +37,13 @@ Clica em Create
 Em seguida ative o ambiente virtual usando o código: venv\Scripts\Activate.ps1
 
 
+*** Configurando o Selenium Webdriver ***
+
+Acesse https://www.selenium.dev/
+Clica em downloads e clica na versão do Selenium para Python
+Copia o seguinte comando: pip install selenium
+Cola o comando no PyCharm ou no Vs Code e aguarde a instalação
+Para verificar se foi realmente instalado use o comando: 
+pip show selenium
+
+
