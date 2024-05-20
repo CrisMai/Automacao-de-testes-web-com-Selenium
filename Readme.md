@@ -27,7 +27,6 @@ Set-ExecutionPolicy Unrestricted -Scope Process
 Esse comando vai habilitar a execução do script na sessão aberta do Powershell.
 
 
-
 *** Criando Ambiente Virtual (venv) no PyCharm ***
 
 Acesse o PyCharm e crie um novo projeto
@@ -45,5 +44,7 @@ Copia o seguinte comando: pip install selenium
 Cola o comando no PyCharm ou no Vs Code e aguarde a instalação
 Para verificar se foi realmente instalado use o comando: 
 pip show selenium
+
+
 
 
