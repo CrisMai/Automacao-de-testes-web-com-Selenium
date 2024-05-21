@@ -16,3 +16,15 @@ Manipula navegadores Web nativamente, suportando várias linguagens de programa�
 Como funciona...
 Temos a parte de automação do código na linguagem escolhida => webdriver  - onde o Selenium vai 
 interpretar o código e traduzir em ações no Browser.
+
+
+*** Mapeamento de Elementos na Tela ***
+
+Tipos de Locators
+
+=> Locators Comuns: Id, Name, Class_Name, Link_Text, Tag_Name, Partial_Link_Text
+
+=> Locators Customizáveis: CSS_Selector (Tag and Id, Tag and Class, Tag and Attribute Tag, 
+Class and Attribute Inner Text)
+XPATH
+
