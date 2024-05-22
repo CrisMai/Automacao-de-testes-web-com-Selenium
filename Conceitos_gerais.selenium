@@ -28,3 +28,9 @@ Tipos de Locators
 Class and Attribute Inner Text)
 XPATH
 
+Estrutura_Locators
+
+=> Locator ID: está dentro da classe By.ID. Ex: Browser.find_element(By.ID, "Password")
+=> Locator Name: está dentro da classe By.NAME. Ex: Browser.find_element(By.NAME, "Password")
+=> Locator Link_Text: está dentro da classe By.LINK_TEXT. Ex: Browser.find_element(By.LINK_TEXT, "Twitter")
+=> Locator Partial_Link_Text: está dentro da classe By.PARTIAL_LINK_TEXT. Ex: Browser.find_element(By.PARTIAL_LINK_TEXT, "Twi")
