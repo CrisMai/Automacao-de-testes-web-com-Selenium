@@ -34,3 +34,12 @@ Estrutura_Locators
 => Locator Name: está dentro da classe By.NAME. Ex: Browser.find_element(By.NAME, "Password")
 => Locator Link_Text: está dentro da classe By.LINK_TEXT. Ex: Browser.find_element(By.LINK_TEXT, "Twitter")
 => Locator Partial_Link_Text: está dentro da classe By.PARTIAL_LINK_TEXT. Ex: Browser.find_element(By.PARTIAL_LINK_TEXT, "Twi")
+=> Locator Class_Name: pode ser comum para mais de um elemento, ou seja, pode ter múltiplos Elementos
+utilizando a mesma classe. Ex:Browser.find_element(By.CLASS_NAME, "input_error form_input")
+                              Browser.find_elements(By.CLASS_NAME, "input_error form_input")
+
+=> Locator Tag_Name: também pode ser comum para mais de um elemento. Ex:
+Browser.find_element(By.TAG_NAME, "input")
+Browser.find_elements(By.TAG_NAME, "input")
+
+
