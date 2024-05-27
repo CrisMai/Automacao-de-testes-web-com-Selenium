@@ -43,3 +43,9 @@ Browser.find_element(By.TAG_NAME, "input")
 Browser.find_elements(By.TAG_NAME, "input")
 
 
+=> CSS_Selector
+
+Tipos:
+- Tag_name#id_value (tag é opcional) - com o ID é usado o separador #
+- Tag_name.class_value (tag é opcional) - nesse caso o separador é o ponto (.)
+- Tag_name[Attribute=value] (tag é opcional) -
