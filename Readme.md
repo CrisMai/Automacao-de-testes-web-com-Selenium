@@ -46,5 +46,12 @@ Para verificar se foi realmente instalado use o comando:
 pip show selenium
 
 
+*** Documentação XPATH ***
+
+https://www.w3schools.com/xml/xpath_intro.asp
+
+
+
+
 
 

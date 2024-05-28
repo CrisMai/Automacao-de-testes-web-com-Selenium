@@ -48,4 +48,13 @@ Browser.find_elements(By.TAG_NAME, "input")
 Tipos:
 - Tag_name#id_value (tag é opcional) - com o ID é usado o separador #
 - Tag_name.class_value (tag é opcional) - nesse caso o separador é o ponto (.)
-- Tag_name[Attribute=value] (tag é opcional) -
+- Tag_name[Attribute=value] (tag é opcional)
+
+
+*** XPATH ***
+
+O XPATH é uma sintaxe para definir parte de um elemento XML podendo ser usado para 
+navegar por elementos e atributos.
+O XPATH usa expressões de caminhos para navegar e localizar elementos em uma página
+web por meio do DOM.
+O XPATH é o endereço de um elemento em uma página.
