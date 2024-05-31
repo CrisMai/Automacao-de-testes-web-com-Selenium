@@ -75,3 +75,26 @@ Geralmente mais curto e mais fácil de entender.
 Menos suscetível a mudanças na estrutura da página.
 Mais flexível, permitindo encontrar elementos independentemente da hierarquia completa.
 Preferível para a maioria dos casos devido à sua flexibilidade e robustez.
+
+
+*** Principais Comandos de Navegação do Selenium Webdriver ***
+
+- get(): Navega para a URL especificada. Este comando abre a página web fornecida no navegador.
+Exemplo: driver.get("http://exemplo.com")
+
+- maximize_window(): Maximiza a janela do navegador. Exemplo: driver.maximize_window()
+
+- refresh(): : Este comando recarrega a página atual, similar ao pressionar F5 ou clicar no botão 
+de recarregar do navegador.
+Exemplo: driver.refresh()
+
+- back(): Navega para a página anterior na história do navegador, similar ao botão "Voltar" do navegador.
+Exemplo: driver.back()
+
+- forward(): Navega para a próxima página na história do navegador,similar ao botão "Avançar" do navegador.
+Exemplo: driver.forward()
+
+- close(): Fecha a janela atual do navegador. Exemplo: driver.close()
+
+- quit(): Fecha todas as janelas do navegador e encerra a sessão do WebDriver.
+Exemplo: driver.quit()
