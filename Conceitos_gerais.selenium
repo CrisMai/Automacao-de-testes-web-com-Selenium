@@ -98,3 +98,22 @@ Exemplo: driver.forward()
 
 - quit(): Fecha todas as janelas do navegador e encerra a sessão do WebDriver.
 Exemplo: driver.quit()
+
+
+
+*** Principais Comandos da Aplicação ***
+
+- title:Este comando retorna o título da página web que está atualmente carregada no navegador.
+Exemplo:
+title = driver.title
+print(title)  # Imprime o título da página atual
+
+- current_url: Retorna a URL da página web que está atualmente carregada no navegador.
+Exemplo:
+current_url = driver.current_url
+print(current_url)  # Imprime a URL da página atual
+
+- page_source: Retorna o HTML completo da página web que está atualmente carregada no navegador.
+Exemplo:
+page_source = driver.page_source
+print(page_source)  # Imprime o código-fonte HTML da página atual
