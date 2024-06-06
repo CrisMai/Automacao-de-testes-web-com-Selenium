@@ -103,7 +103,7 @@ Exemplo: driver.quit()
 
 *** Principais Comandos da Aplicação ***
 
-- title:Este comando retorna o título da página web que está atualmente carregada no navegador.
+- title: Este comando retorna o título da página web que está atualmente carregada no navegador.
 Exemplo:
 title = driver.title
 print(title)  # Imprime o título da página atual
@@ -117,3 +117,25 @@ print(current_url)  # Imprime a URL da página atual
 Exemplo:
 page_source = driver.page_source
 print(page_source)  # Imprime o código-fonte HTML da página atual
+
+
+*** Comandos para Localizar Elementos ***
+
+- find_element(): Localiza e retorna o primeiro elemento que corresponde ao critério de 
+busca especificado. Se nenhum elemento for encontrado, lança uma exceção NoSuchElementException.
+Utilizado quando se espera encontrar exatamente um elemento ou se deseja interagir com o primeiro 
+elemento correspondente.
+Exemplo:
+# Localizar um elemento pelo ID
+element = driver.find_element(By.ID, "element_id")
+print(element.text)  # Imprime o texto do elemento
+
+
+- find_elements(): Localiza e retorna uma lista de todos os elementos que correspondem ao critério 
+de busca especificado. Se nenhum elemento for encontrado, retorna uma lista vazia.
+Utilizado quando se espera encontrar múltiplos elementos ou quando a presença de elementos é opcional.
+Exemplo:
+# Localizar múltiplos elementos pela classe
+elements = driver.find_elements(By.CLASS_NAME, "element_class")
+for element in elements:
+    print(element.text)  # Imprime o texto de cada elemento
