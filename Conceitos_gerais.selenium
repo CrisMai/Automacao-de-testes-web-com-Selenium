@@ -139,3 +139,18 @@ Exemplo:
 elements = driver.find_elements(By.CLASS_NAME, "element_class")
 for element in elements:
     print(element.text)  # Imprime o texto de cada elemento
+
+
+*** Comandos Condicionais ***
+
+- is_displayed(): Verifica a visibilidade dos elementos, se um elemento está sendo mostrado ou não na tela.
+
+- is_enabled(): Verifica se os botões ou campos de entrada estão ativos, ou seja, se o elemento está 
+habilitado ou não.
+
+- is_selected(): Verifica se o elemento está selecionado (checkbox/radio) ou não.
+
+Todos esses elementos retornam True ou False. 
+Esses métodos são úteis para garantir que os elementos da página não permaneçam no estado esperado 
+antes de realizar ações neles, proporcionando uma maneira mais robusta de interação com a interface 
+do usuário durante a automação de testes.
