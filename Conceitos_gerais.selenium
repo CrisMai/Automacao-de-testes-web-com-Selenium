@@ -154,3 +154,42 @@ Todos esses elementos retornam True ou False.
 Esses métodos são úteis para garantir que os elementos da página não permaneçam no estado esperado 
 antes de realizar ações neles, proporcionando uma maneira mais robusta de interação com a interface 
 do usuário durante a automação de testes.
+
+
+*** Comandos de Interação com Elementos ***
+
+- click(): Simula um clique do mouse em um elemento, é usado para clicar em botões, links, caixas de 
+seleção, etc.
+Exemplo:
+element = driver.find_element(By.ID, "submit_button")
+element.click()  # Clica no botão de envio
+
+driver.quit()
+
+
+- send_keys(): Envia uma sequência de teclas para um elemento, é usado para inserir texto em 
+campos de entrada, caixas de texto, etc.
+Exemplo:
+element = driver.find_element(By.ID, "username")
+element.send_keys("meu_nome_de_usuario")  # Insere o texto no campo de entrada
+
+driver.quit()
+
+
+- text: Obtém o texto visível de um elemento, é usado para recuperar o texto contido em elementos 
+como parágrafos, cabeçalhos, etc.
+Exemplo:
+element = driver.find_element(By.ID, "message")
+print(element.text)  # Imprime o texto do elemento
+
+driver.quit()
+
+
+- get_attribute(): Obtém o valor de um atributo de um elemento, é usado para recuperar valores de 
+atributos HTML como id, name, class, href, etc.
+Exemplo:
+element = driver.find_element(By.ID, "logo")
+attribute_value = element.get_attribute("src")
+print(attribute_value)  # Imprime o valor do atributo 'src'
+
+driver.quit()
