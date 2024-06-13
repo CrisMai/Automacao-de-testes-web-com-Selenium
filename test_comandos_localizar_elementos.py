@@ -4,27 +4,28 @@ from selenium.webdriver.common.by import By
 
 browser = webdriver.Chrome()
 
-browser.get("https://www.saucedemo.com/")
+# get()
 browser.maximize_window()
+browser.get("https://www.saucedemo.com/")
 
-# # find_element()
+# find_element
 username = browser.find_element(By.ID, "user-name")
 password = browser.find_element(By.ID, "password")
+btn_login = browser.find_element(By.ID, "login-button")
 
-# send_keys
+# send_keys()
 username.send_keys("standard_user")
 password.send_keys("secret_sauce")
 
-time.sleep(5)
-browser.quit()
+# click()
+btn_login.click()
 
+# text
+products_title = browser.find_element(By.XPATH, "//span[@class='title']")
+print(products_title.text)
+assert products_title.text == "Products"
 
-# find_elements()
-auth_fields = browser.find_elements(By.XPATH, "//*[@class='input_error form_input']")
-print(auth_fields)
-print(len(auth_fields))
-
-assert len(auth_fields) == 1, "O numero de elementos encontrados é diferente do esperado"
-
-time.sleep(5)
-browser.quit()
+# get_attribute()
+img_backpack = browser.find_element(By.XPATH,"(//img[@class='inventory_item_img'])[1]")
+print(img_backpack.get_attribute("alt"))
+assert img_backpack.get_attribute("alt") == "Sauce Labs Backpack"
