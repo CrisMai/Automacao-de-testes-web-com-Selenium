@@ -193,3 +193,47 @@ attribute_value = element.get_attribute("src")
 print(attribute_value)  # Imprime o valor do atributo 'src'
 
 driver.quit()
+
+
+*** Comandos de Espera ***
+
+- time.sleep(): Suspende a execução do script por um período de tempo especificado, utilizado 
+para introduzir uma pausa fixa no script, independentemente do estado da página web.
+Exemplo:
+import time
+# Pausar a execução por 5 segundos
+time.sleep(5)
+
+
+- implicit_wait: Define um tempo de espera padrão que o WebDriver deve aguardar ao tentar 
+localizar um elemento, se o elemento não estiver imediatamente disponível.Define um tempo de espera 
+global para todos os comandos find_element e find_elements.
+Exemplo:
+from selenium import webdriver
+
+driver = webdriver.Chrome()
+driver.implicitly_wait(10)  # Espera até 10 segundos para qualquer elemento aparecer
+
+driver.get("http://exemplo.com")
+element = driver.find_element(By.ID, "element_id")
+
+driver.quit()
+
+
+- explicit_wait: Aguarda até que uma condição específica seja satisfeita antes de continuar a execução,
+como visibilidade de um elemento, clicabilidade, etc.
+Exemplo:
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+
+driver = webdriver.Chrome()
+driver.get("http://exemplo.com")
+
+# Esperar até que o elemento esteja visível por até 10 segundos
+element = WebDriverWait(driver, 10).until(
+    EC.visibility_of_element_located((By.ID, "element_id"))
+)
+
+driver.quit()
