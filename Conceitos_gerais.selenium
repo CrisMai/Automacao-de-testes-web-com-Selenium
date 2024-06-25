@@ -237,3 +237,13 @@ element = WebDriverWait(driver, 10).until(
 )
 
 driver.quit()
+
+
+*** IFrames ***
+
+IFrames (Inline Frames) são elementos HTML que permitem a inclusão de outro documento HTML 
+dentro do documento principal. Eles são amplamente utilizados para incorporar conteúdo de outras 
+fontes, como vídeos, formulários, ou mesmo outras páginas web, dentro da página atual.
+No contexto do Selenium WebDriver, trabalhar com IFrames é feito usando o método switch_to.frame(). 
+Uma vez que você terminou de interagir com o IFrame, você pode voltar para o contexto principal com 
+switch_to.default_content().
