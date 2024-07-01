@@ -51,6 +51,18 @@ pip show selenium
 https://www.w3schools.com/xml/xpath_intro.asp
 
 
+*** Pytest ***
+
+Instalação:
+Para instalar: pip install - U pytest
+
+Conferir se o Pytest foi instalado corretamente: pytest --version
+
+Documentação:
+https://docs.pytest.org/en/7.1.x/getting-started.html
+
+
+
 
 
 

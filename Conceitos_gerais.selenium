@@ -247,3 +247,19 @@ fontes, como vídeos, formulários, ou mesmo outras páginas web, dentro da pág
 No contexto do Selenium WebDriver, trabalhar com IFrames é feito usando o método switch_to.frame(). 
 Uma vez que você terminou de interagir com o IFrame, você pode voltar para o contexto principal com 
 switch_to.default_content().
+
+
+*** Pytest ***
+
+Pytest é um framework de teste que permite escrever códigos de teste usando a linguagem Python.
+Ele ajuda a escrever casos de teste simples e escaláveis para banco de dados, APIs ou interface do
+usuário.
+
+Algumas vantagens do Pytest são:
+- Muito fácil de começar a usar devido a sua sintaxe simples
+- Pode executar testes em paralelo
+- Pode detectar testes automaticamente
+- Pode ignorar testes
+
+O Pytest identifica quais são os casos de testes automaticamente desde que o nome dos métodos de 
+teste estejam no seguinte formato: test_*.py ou *_test.py
