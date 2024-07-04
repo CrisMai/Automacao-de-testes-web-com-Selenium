@@ -263,3 +263,39 @@ Algumas vantagens do Pytest são:
 
 O Pytest identifica quais são os casos de testes automaticamente desde que o nome dos métodos de 
 teste estejam no seguinte formato: test_*.py ou *_test.py
+
+
+*** Principais Comandos e Funções ***
+
+- conftest.py: é um arquivo especial em pytest que permite definir fixtures e hooks de configuração 
+que podem ser usados em múltiplos arquivos de teste. Ele é automaticamente descoberto pelo pytest.
+Serve para compartilhar fixtures e configurações de testes em vários arquivos sem a necessidade de 
+importação explícita.
+Como usar: você coloca o arquivo conftest.py no diretório dos testes. O pytest automaticamente o detecta e 
+disponibiliza as fixtures e hooks definidos nele para todos os arquivos de teste naquele diretório e 
+subdiretórios.
+
+
+- fixtures: são funções que podem ser usadas para configurar um ambiente de teste antes da execução 
+dos testes e fazer limpeza após os testes. Elas fornecem uma maneira de criar objetos reutilizáveis para 
+testes.
+Serve para preparar e fornecer qualquer configuração necessária aos testes, como inicializar variáveis, 
+preparar banco de dados, ou configurar mocks.
+Como Usar: defina uma função com o decorador @pytest.fixture. Essa função pode então ser usada como 
+argumento em funções de teste.
+
+Escopos de Fixtures:
+
+function (padrão): A fixture é criada para cada função de teste.
+class: A fixture é criada uma vez por classe de teste.
+module: A fixture é criada uma vez por módulo de teste.
+package: A fixture é criada uma vez por pacote de teste.
+session: A fixture é criada uma vez por sessão de teste.
+
+
+- marks: são anotações que você pode usar para marcar suas funções de teste. Eles permitem que você 
+categorize, selecione ou ignore testes com base em determinados critérios.
+Serve para executar subconjuntos de testes, marcar testes que precisam ser executados de maneira especial
+ou ignorar temporariamente testes que não devem ser executados.
+Como Usar: use o decorador @pytest.mark.<nome_do_mark> para marcar uma função de teste. Pode ser usado 
+com -m para selecionar testes na linha de comando.
