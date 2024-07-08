@@ -299,3 +299,21 @@ Serve para executar subconjuntos de testes, marcar testes que precisam ser execu
 ou ignorar temporariamente testes que não devem ser executados.
 Como Usar: use o decorador @pytest.mark.<nome_do_mark> para marcar uma função de teste. Pode ser usado 
 com -m para selecionar testes na linha de comando.
+
+
+*** Page Object (POM) ***
+
+Definição: É um padrão de design utilizado em testes de automação para criar uma camada de abstração 
+entre os testes e a interface do usuário (UI) da aplicação. Em vez de interagir diretamente com a UI nos 
+testes, você cria classes que representam as páginas ou componentes da UI. Essas classes encapsulam a 
+lógica de interação com os elementos da página.
+
+Para que é Usado:
+
+- Manutenção Simplificada: Separar a lógica de teste da lógica de interação com a UI facilita a manutenção. 
+Se a UI mudar, você só precisa atualizar a classe do Page Object correspondente, e não todos os testes.
+- Reusabilidade: Permite reutilizar a lógica de interação com a UI em múltiplos testes.
+- Legibilidade: Os testes se tornam mais legíveis e fáceis de entender, pois a lógica de interação com a 
+UI está encapsulada em métodos bem definidos.
+- Redução de Código Duplicado: Centraliza a lógica de interação com elementos da UI, evitando duplicação 
+de código nos testes.
