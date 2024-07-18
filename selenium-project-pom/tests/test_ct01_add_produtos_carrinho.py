@@ -1,4 +1,6 @@
 from selenium.webdriver.common.by import By
+from pages.login_page import LoginPage
+from pages.home_page import HomePage # type: ignore
 import conftest
 import pytest
 
@@ -8,14 +10,14 @@ import pytest
 class TestCT01:
     def test_ct01_add_produtos_carrinho(self):
         driver = conftest.driver
+        login_page = LoginPage()
+        home_page = HomePage()
+        
         # Fazendo o login
-        driver.find_element(By.ID, "user-name").send_keys("standard_user")
-        driver.find_element(By.ID, "password").send_keys("secret_sauce")
-        driver.find_element(By.ID, "login-button").click()
+        login_page.fazer_login("standart_user", "secret_sauce")
 
         # Adicionando a mochila ao carrinho
-        driver.find_element(By.XPATH, "//*[@class='inventory_item_name'and text()='Sauce Labs Backpack']").click()
-        driver.find_element(By.XPATH, "//*[text()='Add to card']").click()
+        home_page.adicionar_ao_carrinho("Sauce Labs Backpack")
 
         # Verificando que a mochila foi adicionada
         driver.find_element(By.XPATH, "//*[@class='shopping_cart_link']").click()
