@@ -1,7 +1,7 @@
 import conftest
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver import ActionChains
+from selenium.webdriver import ActionChains, Keys
 
 
 class BasePage:
@@ -43,3 +43,12 @@ class BasePage:
     def clique_botao_direito(self, locator):
         element = self.esperar_elemento_aparecer(locator)
         ActionChains(self.driver).context_click(element).perform()
+
+    def pressionar_tecla(self, locator, key):
+        elem = self.encontrar_elemento(locator)
+        if key == "ENTER":
+            elem.send_keys(Keys.ENTER)
+        elif key == "SPACE":
+            elem.send_keys(Keys.SPACE)
+        elif key == "F1":
+            elem.send_keys(Keys.F1)
