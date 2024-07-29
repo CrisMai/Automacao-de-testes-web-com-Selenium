@@ -317,3 +317,28 @@ Se a UI mudar, você só precisa atualizar a classe do Page Object correspondent
 UI está encapsulada em métodos bem definidos.
 - Redução de Código Duplicado: Centraliza a lógica de interação com elementos da UI, evitando duplicação 
 de código nos testes.
+
+
+*** Pdb ***
+
+É o depurador interativo para programas Python. Ele permite que você execute seu programa passo a passo, 
+inspecione variáveis, defina pontos de interrupção e siga o fluxo de execução, o que facilita encontrar 
+e corrigir bugs no código.
+
+Como Usar pdb
+Você pode usar pdb de várias maneiras, incluindo:
+
+Executando diretamente na linha de comando.
+Inserindo um ponto de interrupção no código.
+Usando o pytest com a opção --pdb.
+
+Comandos Básicos do pdb
+Uma vez dentro do modo de depuração, você pode usar uma série de comandos para navegar pelo código e 
+inspecionar o estado do programa. Aqui estão alguns dos comandos mais úteis:
+
+n (next): Executa a próxima linha de código, mas não entra em funções chamadas.
+s (step): Executa a próxima linha de código e entra em funções chamadas.
+c (continue): Continua a execução até o próximo ponto de interrupção.
+l (list): Mostra o código ao redor da linha atual.
+p (print): Avalia e imprime a expressão fornecida.
+q (quit): Sai do depurador e do programa.
