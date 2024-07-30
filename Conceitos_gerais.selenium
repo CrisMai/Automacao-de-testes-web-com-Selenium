@@ -342,3 +342,19 @@ c (continue): Continua a execução até o próximo ponto de interrupção.
 l (list): Mostra o código ao redor da linha atual.
 p (print): Avalia e imprime a expressão fornecida.
 q (quit): Sai do depurador e do programa.
+
+
+*** Trace ***
+
+O uso da opção --trace com pytest é uma prática essencial para depuração aprofundada, especialmente 
+quando se trata de problemas difíceis de diagnóstico. 
+É uma ferramenta de depuração que coloca o pytest de modo interativo usando o depurador pdb. Isso 
+permite que você inspecione o código antes e durante a execução dos testes, linha por linha, fornecendo 
+uma maneira detalhada de acompanhar a execução e entender o comportamento do código.
+
+Vantagens do Uso do--trace
+Controle Fino : Permite inspeção e controle detalhado do fluxo de execução do teste.
+Diagnóstico Eficiente : A capacidade de parar e funcionar o estado do programa em pontos específicos 
+facilita a identificação de bugs.
+Entendimento do Fluxo : Ajuda a entender como o código é executado e como as diferentes partes do 
+código interagem.
