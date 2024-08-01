@@ -370,3 +370,59 @@ Quando se trabalha com Selenium para automação de navegadores, você pode usar
 a execução do script em um ponto específico, permitindo inspecionar o estado do navegador, os elementos 
 da página, e as variáveis em uso. Isso é útil para verificar se os elementos foram corretamente 
 localizados ou para inspecionar as ações realizadas pelo script até aquele momento.
+
+
+*** WebDriverManager ***
+
+O WebDriverManager é uma ferramenta que simplifica o processo de configuração dos drivers para diferentes 
+navegadores ao usar Selenium WebDriver. Normalmente, ao trabalhar com Selenium, você precisa baixar 
+manualmente o driver do navegador (como ChromeDriver, GeckoDriver, etc.) e configurá-lo no PATH do 
+sistema ou fornecer o caminho para o driver no código. 
+O WebDriverManager automatiza esse processo, baixando e gerenciando automaticamente as versões 
+apropriadas dos drivers necessários para o navegador que você está utilizando.
+
+Como Usar o WebDriverManager
+O WebDriverManager pode ser integrado com Selenium em Python através da biblioteca webdriver_manager. 
+
+Instalação:
+pip install webdriver_manager
+
+Utilização com Selenium
+
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from webdriver_manager.chrome import ChromeDriverManager
+
+# Configuração do WebDriver para o Chrome
+driver = webdriver.Chrome(ChromeDriverManager().install())
+
+try:
+    # Navegar para uma página de exemplo
+    driver.get("https://example.com")
+
+    # Interagir com elementos da página
+    element = driver.find_element(By.TAG_NAME, 'h1')
+    print(element.text)
+finally:
+    # Fechar o navegador
+    driver.quit()
+
+Explicação do Código
+Importações:
+webdriver: Importa o módulo Selenium para controle do navegador.
+By: Fornece localizadores de elementos.
+ChromeDriverManager: Um gerenciador específico para o ChromeDriver, parte do webdriver_manager.
+
+Inicialização do WebDriver:
+
+ChromeDriverManager().install() baixa automaticamente o ChromeDriver necessário e retorna o caminho 
+do driver instalado. O método install() verifica a versão do navegador instalada e baixa a versão 
+correspondente do driver, se necessário.
+Uso do Driver:
+
+driver.get("https://example.com") abre a página desejada.
+driver.find_element(By.TAG_NAME, 'h1') localiza o elemento <h1> na página.
+O texto do elemento é impresso.
+Finalização:
+
+driver.quit() fecha o navegador.
