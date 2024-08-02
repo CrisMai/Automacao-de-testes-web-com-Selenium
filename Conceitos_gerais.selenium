@@ -426,3 +426,24 @@ O texto do elemento é impresso.
 Finalização:
 
 driver.quit() fecha o navegador.
+
+
+*** Atualização de pacotes já instalados ***
+
+O comando geral para atualizar um pacote é:
+
+pip install --upgrade <nome_do_pacote>
+
+Se você quiser atualizar o pacote requests para a versão mais recente disponível, você pode usar 
+o seguinte comando:
+
+pip install --upgrade requests
+
+Antes de atualizar, pode ser útil verificar a versão atualmente instalada de um pacote. 
+Isso pode ser feito usando o comando:
+
+pip show <nome_do_pacote>
+
+Se você deseja atualizar todos os pacotes instalados em um ambiente, pode usar o seguinte comando:
+
+pip list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1 | xargs -n1 pip install -U
